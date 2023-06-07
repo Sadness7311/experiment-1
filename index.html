@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Portfolio-2</title>
+  </head>
+  <body>
+    <div class="nav-container">
+      <ul class="nav">
+        <i class="ri-menu-4-line"></i>
+        <li><h1>sdn</h1></li>
+      </ul>
+    </div>
+    <div class="button-container">
+      <button>Learn More <div></div></button>
+    </div>
+    <canvas class="webgl"></canvas>
+    <script type="module" src="/main.js"></script>
+    <script>
+      const light = document.querySelector('.button-container button div')
+      document.body.addEventListener('pointermove', e => {
+          gsap.to(light, { width: e.clientX/6, height: e.clientY/6 })
+      })
+</script>
+  </body>
+</html>
